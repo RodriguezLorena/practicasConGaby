@@ -244,24 +244,130 @@
     // }
 
 
-    function calculadora(primerNumero, operacion,  segundoNumero) {
-        switch (operacion) {
-            case "+":
-                return primerNumero + segundoNumero;
-                break;
-            case "-":
-                return primerNumero - segundoNumero;
-                break;
-            case "*":
-                return primerNumero * segundoNumero;
-                break;
-            case "/":
-                return primerNumero / segundoNumero;
-                break;
-            default:
-                return 0;
-                break;
-        }
+    // function calculadora(primerNumero, operacion,  segundoNumero) {
+    //     switch (operacion) {
+    //         case "+":
+    //             return primerNumero + segundoNumero;
+    //             break;
+    //         case "-":
+    //             return primerNumero - segundoNumero;
+    //             break;
+    //         case "*":
+    //             return primerNumero * segundoNumero;
+    //             break;
+    //         case "/":
+    //             return primerNumero / segundoNumero;
+    //             break;
+    //         default:
+    //             return 0;
+    //             break;
+    //     }
+    // }
+    // console.log(calculadora(10, "*", 5));
+    // alert(calculadora(10, "*", 5));
+
+    // function entrada(){
+    //     let ingresarDatos = prompt("ingrese dato");
+    //     return ingresarDatos
+    // }
+    // alert(entrada());
+
+    // function procesamiento(valor){
+    //     let entrada=Number(prompt("ingrese un numero"))
+    //     return entrada * valor;
+    // }
+
+    // alert(procesamiento(4));
+
+    // function entrada(){
+    //     return prompt("INGRESAR DATO");
+    // }
+    
+    // function procesamiento(valor){
+    //     return "LA ENTRADA ES "+valor
+    // }
+    
+    // function salida(valor){
+    //     alert(valor);
+    // }
+  
+    // salida(procesamiento(entrada())); //verlo, me cuesta entender.
+
+
+    // function redondeo(valor){
+    //     return Math.round(valor)
+    // }
+    // for (let i = 0; i < 5; i++) {
+    //     let entrada = prompt("INGRESAR NUMERO DECIMAL");
+    //     alert(redondeo(entrada));
+    // }
+
+    // function impuesto(precio, porcentaje){
+    //  let impuesto =(precio * porcentaje) / 100;
+    //  return precio + impuesto;
+    // }
+    
+    // for(let i = 1; i <=5; i++){
+    //     let adquirirPrecio= Number(prompt("ingrese precio"));
+    //     let adquirirPorcentaje = Number(prompt("ingrese porcentaje"))
+    //     alert(impuesto(adquirirPrecio,adquirirPorcentaje));
+    // }
+
+    // function impuesto(precio, porcentaje){
+    //     return precio + ((precio * porcentaje)/100)
+    // }
+    // for (let index = 0; index < 5; index++) {
+    //     let resultado = impuesto(parseFloat(prompt("INGRESAR PRECIO"))
+    //   ,parseFloat(prompt("INGRESAR %")));
+    //     alert(resultado);
+    // }
+    
+
+//     function cotizarDolar(pesos){
+//         let dolarOficial= 100.45;
+//         return pesos / dolarOficial;
+//     }
+
+//    console.log(cotizarDolar(500));
+
+//    function cotizarPesos(dolar){
+//        let pesoOficial = 0.00995520159;
+//        return dolar/pesoOficial;
+//    }
+
+//    console.log(cotizarPesos(1));
+
+// const COTIZACION_DOLAR = 100.45;
+// const cotizarDolar = (pesos) => pesos / COTIZACION_DOLAR;
+// const cotizarPesos = (dolar) => dolar * COTIZACION_DOLAR;
+// let seleccion = prompt("SELECCIONAR COTIZACION \n 1 - DOLARES A PESOS \n 2 -  PESOS A DOLAR ");
+// let valor = prompt("VALOR");
+// switch (seleccion) {
+//     case "1":
+//         alert(cotizarPesos(valor));
+//         break;
+//     case "2":
+//         alert(cotizarDolar(valor));
+//         break;
+//     default:
+//         break;
+// }
+
+
+function validacion(cadena){
+    if(cadena !== ""){
+        return true;
+    }else{
+        return false;
     }
-    console.log(calculadora(10, "*", 5));
-    alert(calculadora(10, "*", 5));
+}
+
+
+
+let datoIngresado = prompt("ingrese una cadena de texto");
+while(datoIngresado !== "ESC"){
+   
+    alert( validacion(datoIngresado));
+    datoIngresado = prompt("ingrese una cadena de texto");
+   
+}
