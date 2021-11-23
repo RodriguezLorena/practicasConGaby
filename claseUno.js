@@ -297,11 +297,15 @@
     // function redondeo(valor){
     //     return Math.round(valor)
     // }
+   
+   
     // for (let i = 0; i < 5; i++) {
     //     let entrada = prompt("INGRESAR NUMERO DECIMAL");
     //     alert(redondeo(entrada));
     // }
 
+   
+   
     // function impuesto(precio, porcentaje){
     //  let impuesto =(precio * porcentaje) / 100;
     //  return precio + impuesto;
@@ -316,26 +320,31 @@
     // function impuesto(precio, porcentaje){
     //     return precio + ((precio * porcentaje)/100)
     // }
+     
     // for (let index = 0; index < 5; index++) {
-    //     let resultado = impuesto(parseFloat(prompt("INGRESAR PRECIO"))
-    //   ,parseFloat(prompt("INGRESAR %")));
+    //     let resultado = impuesto(parseFloat(prompt("INGRESAR PRECIO")),parseFloat(prompt("INGRESAR %")));
     //     alert(resultado);
     // }
+   
+
     
 
 //     function cotizarDolar(pesos){
-//         let dolarOficial= 100.45;
-//         return pesos / dolarOficial;
+//         const DOLAROFICIAL= 100.45;
+//         return pesos / DOLAROFICIAL;
 //     }
 
 //    console.log(cotizarDolar(500));
 
 //    function cotizarPesos(dolar){
-//        let pesoOficial = 0.00995520159;
-//        return dolar/pesoOficial;
+//        const PESOOFICIAL = 0.00995520159;
+//        return dolar/PESOOFICIAL;
 //    }
 
 //    console.log(cotizarPesos(1));
+
+
+
 
 // const COTIZACION_DOLAR = 100.45;
 // const cotizarDolar = (pesos) => pesos / COTIZACION_DOLAR;
@@ -354,20 +363,145 @@
 // }
 
 
-function validacion(cadena){
-    if(cadena !== ""){
-        return true;
-    }else{
-        return false;
+// function validacion(cadena){
+//     if(cadena !== ""){
+//         return true;
+//     }
+//     return false;
+// }
+
+
+
+// let datoIngresado = prompt("ingrese una cadena de texto");
+// while(datoIngresado !== "ESC"){
+   
+//     alert(validacion(datoIngresado));
+//     datoIngresado = prompt("ingrese una cadena de texto");
+   
+// }
+
+// const months = ['Jan', 'March', 'April', "JSJSJS"];
+// months.splice(1, 1);
+// // replaces 1 element at index 4
+// console.log(months);
+// // expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+
+// class Producto {
+//     constructor(nombre, precio) {
+//         this.nombre  = nombre.toUpperCase();
+//         this.precio  = parseFloat(precio);
+//         this.vendido = false;
+//     }
+//     sumaIva() {
+//         this.precio = this.precio * 1.21;
+//     }
+// }
+//Declaramos un array de productos para almacenar objetos
+// const productos = [];
+// productos.push(new Producto("arroz", "125"));
+// productos.push(new Producto("fideo", "70"));
+// productos.push(new Producto("pan", "50"));
+// //Iteramos el array con for...of para modificarlos a todos
+// for (const producto of productos)
+//     producto.sumaIva();
+
+
+//     class Tienda{
+//         constructor(nombre, direccion, propietario, rubro){
+//             this.nombre = nombre;
+//             this.direccion = direccion;
+//             this.propietario = propietario;
+//             this.rubro = rubro;
+//         }
+//         estaAbierto(hora){
+//             if((hora >= 8 && hora <= 12)|| (hora >= 15 && hora <= 19)){
+//                 return true;
+//             }
+//             return false;
+//         }   
+//         esPropieatrio(nombre){
+//             if(nombre === this.propietario){
+//                return true
+//             }
+//             return false
+//         }
+        
+//     }
+
+//     const MORENA = new Tienda("Morena", "Lavalle 2371", "HERNAN", "deportiva");
+//     const AFRODITA= new Tienda("Afrodita", "Lavalle 2370", "OFELIA", "Lenceria");
+//     const ANABENDITA= new Tienda("Ana Bendita", "Cocomarola", "ADRIANA", "boutique");
+
+//     console.log(MORENA);
+//     console.log(AFRODITA);
+//     console.log(ANABENDITA);
+
+
+   
+//     // let tiendasIngresadas= "";
+
+//     // for(let i = 1; i <= 5; i++){
+//     //     const TIENDADEUSUARIO= new Tienda(prompt("ingrese nombre de la tiena"), 
+//     //                                       prompt("ingrese direccion"), 
+//     //                                       prompt("ingrese el nombre del propietario"),
+//     //                                       prompt("ingrese el rubro"));
+//     //         tiendasIngresadas+= "Tienda: "+TIENDADEUSUARIO.nombre+" "+ "Direccion: "+TIENDADEUSUARIO.direccion+" "+"Propitario: "+TIENDADEUSUARIO.propietario+" "+"rubro: "+TIENDADEUSUARIO.rubro+"\n";
+
+//     // }
+//     // alert(tiendasIngresadas);
+
+
+  
+//     // const TIENDANUEVA= new Tienda("PELUCHIN", "ARTURO NAVAJAS", "PATRICIA", "LIMPIEZA");
+
+//     // for(let i =1; i <= 3; i++){
+//     //     const horaDeUsuario = Number(prompt("ingrese una hora"));
+//     //         if(TIENDANUEVA.estaAbierto(horaDeUsuario)){
+//     //             alert("LA TIENDA ESTA ABIERTA A LAS "+ horaDeUsuario)
+//     //         }else{
+//     //             alert("LA TIENDA ESTA CERRADA A LAS "+ horaDeUsuario)
+//     //         }
+        
+//     // }
+
+//    for(let i = 0; i < 5; i++){
+//        let nombreIngresadoPorUsuario= prompt("ingrese el nombre del propietario").toUpperCase()
+//        if((MORENA.esPropieatrio(nombreIngresadoPorUsuario)) || (AFRODITA.esPropieatrio(nombreIngresadoPorUsuario)) || (ANABENDITA.esPropieatrio(nombreIngresadoPorUsuario))){
+//            alert(nombreIngresadoPorUsuario + " es propietario de la tienda");
+//        }else{
+//            alert(nombreIngresadoPorUsuario + " no es propietario de la tienda");
+//        }       
+//    }
+
+
+    class Cliente{
+        constructor(nombre, presupuesto, tarjeta, telefono){
+            this.nombre = nombre;
+            this.presupuesto = parseFloat(presupuesto);
+            this.nombre = tarjeta;
+            this.telefono = telefono;
+        }
+        transferirDinero(valor){
+            if((this.presupuesto > 0) && (valor < this.presupuesto)){
+                this.presupuesto -= valor;
+                return valor;
+            }else{
+                return 0;
+            }  
+        }   
     }
-}
 
+    const CLIENTEUNO = new Cliente("Aguirre Feliza", 10000, true, "47839393");
+    const CLIENTEDOS = new Cliente("Lindolfo Ayala", 5000, true, "7484573");
+    const CLIENTETRES= new Cliente("Ayala Maximiliano", 4000, false, "29448382");
 
-
-let datoIngresado = prompt("ingrese una cadena de texto");
-while(datoIngresado !== "ESC"){
-   
-    alert( validacion(datoIngresado));
-    datoIngresado = prompt("ingrese una cadena de texto");
-   
-}
+    for(let i =0; i < 5; i++){
+        let valorAIngresar= parseInt(prompt("ingresa un valor"));
+        if(CLIENTEUNO.transferirDinero(valorAIngresar)){
+            alert("le alcanza el presupuesto de " + valorAIngresar);
+        }
+        alert("no te alcanza, pobre!!!")
+      
+    }
+    
