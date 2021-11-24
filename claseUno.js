@@ -475,33 +475,149 @@
 //    }
 
 
-    class Cliente{
-        constructor(nombre, presupuesto, tarjeta, telefono){
+    // class Cliente{
+    //     constructor(nombre, presupuesto, tarjeta, telefono){
+    //         this.nombre = nombre;
+    //         this.presupuesto = parseFloat(presupuesto);
+    //         this.nombre = tarjeta;
+    //         this.telefono = telefono;
+    //     }
+    //     transferirDinero(valor){
+    //         if((this.presupuesto > 0) && (valor < this.presupuesto)){
+    //             this.presupuesto -= valor;
+    //             return valor;
+    //         }else{
+    //             return 0;
+    //         }  
+    //     }   
+    // }
+
+    // const CLIENTEUNO = new Cliente("Aguirre Feliza", 10000, true, "47839393");
+    // const CLIENTEDOS = new Cliente("Lindolfo Ayala", 5000, true, "7484573");
+    // const CLIENTETRES= new Cliente("Ayala Maximiliano", 4000, false, "29448382");
+
+    // for(let i =0; i < 5; i++){
+    //     let valorAIngresar= parseInt(prompt("ingresa un valor"));
+    //     if(CLIENTEUNO.transferirDinero(valorAIngresar)){
+    //         alert("le alcanza el presupuesto de " + valorAIngresar);
+    //     }
+    //     alert("no te alcanza!!!")
+      
+    // }
+
+
+    // const ARRAYEQUIPO=["Mauricio", "Maxi", "Pato", "Maiten"];
+
+    // for (const jugador of ARRAYEQUIPO) {
+    //     alert("el nombre de cada jugador es: " + jugador);
+    // } PREGUNTAR COMO TRAIGO LA POSICION CON FOR...OF
+    
+    // const EQUIPO = ['Mauricio', 'Maxi', 'Maiten', 'Patricia'];
+    
+    // for (let i = 0; i < EQUIPO.length; i++) {
+    // alert("POSICION " + i + " JUGADOR " + EQUIPO[i]);
+    // }
+
+
+    // const ARRAYVACIO=[];
+    // let nombre = prompt("ingresa nombres").toUpperCase();
+    // while(nombre != "ESC"){
+    //    ARRAYVACIO.push(nombre);
+    //    nombre = prompt("ingresa  otro nombres");
+    // }
+
+    // for (let i = 0; i < ARRAYVACIO.length; i++) {
+    //      alert("EL NOMBRE DE CADA JUGADOR ES: "+ ARRAYVACIO[i] + "SU POSICION ES: " + i);
+    //      }
+
+
+    // class Jugador{
+    //     constructor(nombre, numero, edad, lesion){
+    //         this.nombre= nombre;
+    //         this.numero=numero;
+    //         this.edad=edad;
+    //         this.lesion=lesion;
+    //     }
+    // }
+    // const ARRAYJUGADORES= [];
+
+
+    // const JUGADORUNO= new Jugador("Alan", 11, 18, false);
+    // const JUGADORDOS= new Jugador("Messi", 10, 32, false);
+    // const JUGADORTRES= new Jugador("Icardi", 7, 28, true);
+    // const JUGADORCUATRO= new Jugador("Di Maria", 9, 33, true);
+    // const JUGADORCINCO= new Jugador("Pedro", 5, 20 , false);
+
+
+    // console.log(ARRAYJUGADORES.push(JUGADORUNO));
+    // console.log(ARRAYJUGADORES.push(JUGADORDOS));
+    // console.log(ARRAYJUGADORES.push(JUGADORTRES));
+    // console.log(ARRAYJUGADORES.push(JUGADORCUATRO));
+    // console.log(ARRAYJUGADORES.push(JUGADORCINCO));
+    // console.log(ARRAYJUGADORES);
+
+
+    class Jugador {
+        constructor(nombre, camiseta, edad, lesionado) {
             this.nombre = nombre;
-            this.presupuesto = parseFloat(presupuesto);
-            this.nombre = tarjeta;
-            this.telefono = telefono;
+            this.camiseta = camiseta;
+            this.edad = edad;
+            this.lesionado = lesionado;
         }
-        transferirDinero(valor){
-            if((this.presupuesto > 0) && (valor < this.presupuesto)){
-                this.presupuesto -= valor;
-                return valor;
-            }else{
-                return 0;
-            }  
-        }   
+    }
+    const jugadores = [];
+    jugadores.push(new Jugador("BART", 15 , 11, false));
+    jugadores.push(new Jugador("NELSON", 2 , 18, false));
+    jugadores.push(new Jugador("MILHOUSE", 68 , 12, true));
+    jugadores.push(new Jugador("MARTIN", 0 , 11, false));
+    jugadores.push(new Jugador("ROD", 98 , 12, false));
+    console.log(jugadores);
+
+
+    // function buscarJugador(equipo, jugador){
+    //     return equipo.find(objeto => objeto.nombre === jugador.toUpperCase());
+    // }
+    
+    // for (let i = 0; i < 3; i++) {
+    //     let busqueda = buscarJugador(ARRAYJUGADORES, prompt('INGRESAR NOMBRE DE JUGADOR'));
+    //     if(busqueda != undefined){
+    //         alert('JUGADOR '+busqueda.nombre+' CAMISETA '+busqueda.numero+' EDAD '+busqueda.edad);
+    //     }else{
+    //         alert('NO EXISTE JUGADOR CON ESE NOMBRE');
+    //     }
+    // }// ver por que no funciona.
+    
+
+    // function buscarJugador(equipo, jugador){
+    //     return equipo.find(objeto => objeto.nombre === jugador.toUpperCase());
+    // }
+    // for (let index = 0; index < 3; index++) {
+    //     let busqueda = buscarJugador(jugadores, prompt("INGRESAR NOMBRE DE JUGADOR"));
+    //     if(busqueda != undefined){
+    //         alert("JUGADOR "+busqueda.nombre+ "CAMISETA "+busqueda.camiseta+ "EDAD "+busqueda.edad);
+    //     }else{
+    //         alert('NO EXISTE JUGADOR CON ESE NOMBRE');
+    //     }
+    // }
+    
+
+    function filtroJugadores(equipo,edad){
+        return equipo.filter(objeto => objeto.edad === parseInt(edad));
     }
 
-    const CLIENTEUNO = new Cliente("Aguirre Feliza", 10000, true, "47839393");
-    const CLIENTEDOS = new Cliente("Lindolfo Ayala", 5000, true, "7484573");
-    const CLIENTETRES= new Cliente("Ayala Maximiliano", 4000, false, "29448382");
-
-    for(let i =0; i < 5; i++){
-        let valorAIngresar= parseInt(prompt("ingresa un valor"));
-        if(CLIENTEUNO.transferirDinero(valorAIngresar)){
-            alert("le alcanza el presupuesto de " + valorAIngresar);
+    function listaJugadores(jugadores) {
+        let lista = '';
+        for (const jugador of jugadores) {
+            lista += 'JUGADOR ' + jugador.nombre + ' CAMISETA ' + jugador.camiseta + ' EDAD ' + jugador.edad + '\n'
         }
-        alert("no te alcanza, pobre!!!")
-      
+        return lista;
+    }
+    for (let i = 0; i < 5; i++) {
+        let filtro = filtroJugadores(jugadores, prompt("INGRESAR EDAD DEL JUGADOR"));
+        if (filtro.length > 0) {
+            alert(listaJugadores(filtro));
+        } else {
+            alert('NO EXISTE JUGADORES CON ESA EDAD');
+        }
     }
     
